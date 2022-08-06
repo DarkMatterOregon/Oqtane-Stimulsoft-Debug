@@ -1,0 +1,77 @@
+@using DarkMatter.Stimulsoft.Services
+@using DarkMatter.Stimulsoft.Models
+
+@namespace DarkMatter.Stimulsoft
+@inherits ModuleBase
+@inject IStimulsoftService StimulsoftService
+@inject NavigationManager NavigationManager
+@inject IStringLocalizer<Index> Localizer
+
+@if (_Stimulsofts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ActionLink Action="Add" Security="SecurityAccessLevel.Edit" Text="Add Stimulsoft" ResourceKey="Add" />
+    <br />
+    <br />
+    @if (@_Stimulsofts.Count != 0)
+    {
+        <Pager Items="@_Stimulsofts">
+            <Header>
+                <th style="width: 1px;">&nbsp;</th>
+                <th style="width: 1px;">&nbsp;</th>
+                <th>@Localizer["Name"]</th>
+            </Header>
+            <Row>
+                <td><ActionLink Action="Edit" Parameters="@($"id=" + context.StimulsoftId.ToString())" ResourceKey="Edit"  /></td>
+                <td><ActionDialog Header="Delete Stimulsoft" Message="@("Are You Sure You Wish To Delete The " + context.Name + " Stimulsoft?")" Action="Delete" Security="SecurityAccessLevel.Edit" Class="btn btn-danger" OnClick="@(async () => await Delete(context))" ResourceKey="Delete"  /></td>
+                <td>@context.Name</td>
+            </Row>
+        </Pager>
+    }
+    else
+    {
+        <p>@Localizer["Message.DisplayNone"]</p>
+    }
+}
+
+@code {
+    public override List<Resource> Resources => new List<Resource>()
+    {
+        new Resource { ResourceType = ResourceType.Stylesheet, Url = ModulePath() + "Module.css" },
+        new Resource { ResourceType = ResourceType.Script, Url = ModulePath() + "Module.js" }
+    };
+
+    List<Stimulsoft> _Stimulsofts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _Stimulsofts = await StimulsoftService.GetStimulsoftsAsync(ModuleState.ModuleId);
+        }
+        catch (Exception ex)
+        {
+            await logger.LogError(ex, "Error Loading Stimulsoft {Error}", ex.Message);
+            AddModuleMessage(Localizer["Message.LoadError"], MessageType.Error);
+        }
+    }
+
+    private async Task Delete(Stimulsoft Stimulsoft)
+    {
+        try
+        {
+            await StimulsoftService.DeleteStimulsoftAsync(Stimulsoft.StimulsoftId, ModuleState.ModuleId);
+            await logger.LogInformation("Stimulsoft Deleted {Stimulsoft}", Stimulsoft);
+            _Stimulsofts = await StimulsoftService.GetStimulsoftsAsync(ModuleState.ModuleId);
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            await logger.LogError(ex, "Error Deleting Stimulsoft {Stimulsoft} {Error}", Stimulsoft, ex.Message);
+            AddModuleMessage(Localizer["Message.DeleteError"], MessageType.Error);
+        }
+    }
+}
