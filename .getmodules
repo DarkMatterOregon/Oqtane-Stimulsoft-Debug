@@ -1,0 +1,5 @@
+[submodule "src/oqtane.framework"]
+	path = src/oqtane.framework
+	url = https://github.com/darkmatteroregon/oqtane.framework
+	branch = release/v3.1.4
+	ignore = dirty
