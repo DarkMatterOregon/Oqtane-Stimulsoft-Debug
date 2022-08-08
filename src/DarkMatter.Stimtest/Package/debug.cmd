@@ -7,3 +7,4 @@ XCOPY "..\Shared\bin\Debug\net6.0\DarkMatter.Stimtest.Shared.Oqtane.pdb" "..\..\
 XCOPY "..\Server\wwwroot\*" "..\..\oqtane.framework\Oqtane.Server\wwwroot\" /Y /S /I
 XCOPY "..\Server\wwwroot\reports\*" "..\..\oqtane.framework\Oqtane.Server\reports\" /Y /S /I
 XCOPY "..\Server\data\*" "..\..\oqtane.framework\Oqtane.Server\data" /Y /S /I
+XCOPY "..\Server\stimLibs\*" "..\..\oqtane.framework\Oqtane.Server\bin\Debug\net6.0\" /Y /S /I
