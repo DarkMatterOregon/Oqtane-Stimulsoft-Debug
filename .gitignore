@@ -349,3 +349,4 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 /src/DarkMatter.Stimulsoft/.cr/personal/FavoritesList
+/src/DarkMatter.Stimtest/.cr/personal/FavoritesList

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>    
+    <Version>1.0.0</Version>
+    <Product>DarkMatter.Stimtest</Product>
+    <Authors>DarkMatter</Authors>
+    <Company>DarkMatter</Company>
+    <Description></Description>
+    <Copyright>DarkMatter</Copyright>
+    <AssemblyName>DarkMatter.Stimtest.Shared.Oqtane</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Oqtane.Shared"><HintPath>..\..\oqtane.framework\Oqtane.Server\bin\Debug\net6.0\Oqtane.Shared.dll</HintPath></Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,7 +1,16 @@
 # Oqtane-Stimulsoft-Debug
-debugging repo to support stimulsoft on oqtane.
+example repo to debug stimulsoft on oqtane.
 
-Includes a database with the module loaded int a page.
+Includes a database with the module loaded into a page.
 
-"DefaultConnection": "Data Source=..\\..\\..\\..\\data\\Oqtane-Stimulsoft.db;"
+init the submodule and the update the connection string in oqtane.server appsettings with the following:
+
+"DefaultConnection": "Data Source=Oqtane.db;"
+
+login with host/1Password!
+
+following the quickstart
+https://www.stimulsoft.com/en/samples/reports-blazor/server/showing-a-report-in-the-viewer
+
+See commit history for details.
 

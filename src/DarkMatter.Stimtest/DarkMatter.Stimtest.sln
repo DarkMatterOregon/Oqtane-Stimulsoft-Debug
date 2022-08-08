@@ -1,0 +1,65 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oqtane.Server", "..\oqtane.framework\Oqtane.Server\Oqtane.Server.csproj", "{3AB6FCC9-EFEB-4C0E-A2CF-8103914C5196}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkMatter.Stimtest.Client", "Client\DarkMatter.Stimtest.Client.csproj", "{AA8E58A1-CD09-4208-BF66-A8BB341FD669}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkMatter.Stimtest.Server", "Server\DarkMatter.Stimtest.Server.csproj", "{04B05448-788F-433D-92C0-FED35122D45A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkMatter.Stimtest.Shared", "Shared\DarkMatter.Stimtest.Shared.csproj", "{18D73F73-D7BE-4388-85BA-FBD9AC96FCA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkMatter.Stimtest.Package", "Package\DarkMatter.Stimtest.Package.csproj", "{C5CE512D-CBB7-4545-AF0F-9B6591A0C3A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oqtane.Shared", "..\oqtane.framework\Oqtane.Shared\Oqtane.Shared.csproj", "{362AFE5A-34FD-44AC-9662-1BBB7A72010D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oqtane.Client", "..\oqtane.framework\Oqtane.Client\Oqtane.Client.csproj", "{8D276D7A-55BA-4378-ACC1-EE700FD60244}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D4B0B1B9-705D-46D9-9196-E2DF9249C07E}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\README.md = ..\..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AB6FCC9-EFEB-4C0E-A2CF-8103914C5196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AB6FCC9-EFEB-4C0E-A2CF-8103914C5196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AB6FCC9-EFEB-4C0E-A2CF-8103914C5196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AB6FCC9-EFEB-4C0E-A2CF-8103914C5196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA8E58A1-CD09-4208-BF66-A8BB341FD669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8E58A1-CD09-4208-BF66-A8BB341FD669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8E58A1-CD09-4208-BF66-A8BB341FD669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8E58A1-CD09-4208-BF66-A8BB341FD669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04B05448-788F-433D-92C0-FED35122D45A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B05448-788F-433D-92C0-FED35122D45A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B05448-788F-433D-92C0-FED35122D45A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B05448-788F-433D-92C0-FED35122D45A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18D73F73-D7BE-4388-85BA-FBD9AC96FCA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18D73F73-D7BE-4388-85BA-FBD9AC96FCA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18D73F73-D7BE-4388-85BA-FBD9AC96FCA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18D73F73-D7BE-4388-85BA-FBD9AC96FCA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5CE512D-CBB7-4545-AF0F-9B6591A0C3A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5CE512D-CBB7-4545-AF0F-9B6591A0C3A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5CE512D-CBB7-4545-AF0F-9B6591A0C3A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5CE512D-CBB7-4545-AF0F-9B6591A0C3A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{362AFE5A-34FD-44AC-9662-1BBB7A72010D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{362AFE5A-34FD-44AC-9662-1BBB7A72010D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{362AFE5A-34FD-44AC-9662-1BBB7A72010D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{362AFE5A-34FD-44AC-9662-1BBB7A72010D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D276D7A-55BA-4378-ACC1-EE700FD60244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D276D7A-55BA-4378-ACC1-EE700FD60244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D276D7A-55BA-4378-ACC1-EE700FD60244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D276D7A-55BA-4378-ACC1-EE700FD60244}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D016F15-46FE-4726-8DFD-2E4FD4DC7668}
+	EndGlobalSection
+EndGlobal

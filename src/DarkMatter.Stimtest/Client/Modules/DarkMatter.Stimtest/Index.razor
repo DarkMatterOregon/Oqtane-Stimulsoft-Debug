@@ -1,0 +1,30 @@
+@using DarkMatter.Stimtest.Services
+@using DarkMatter.Stimtest.Models
+
+@using Stimulsoft.Base
+@using Stimulsoft.Report
+@using Stimulsoft.Report.Blazor
+
+@namespace DarkMatter.Stimtest
+@inherits ModuleBase
+@inject IStimtestService StimtestService
+@inject NavigationManager NavigationManager
+@inject IStringLocalizer<Index> Localizer
+
+<StiBlazorViewer Report="@report" />
+
+
+@code {
+    private StiReport report;
+
+    
+    protected override void  OnInitialized()
+    {
+        //Create empty report object
+        report = new StiReport();
+        
+        //Load report template
+        report.Load("Reports/TwoSimpleLists.mrt");
+    }
+
+}
