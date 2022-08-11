@@ -11,20 +11,21 @@
 @inject NavigationManager NavigationManager
 @inject IStringLocalizer<Index> Localizer
 
+<h3>Sample Report</h3>
 <StiBlazorViewer Report="@report" />
-
 
 @code {
     private StiReport report;
 
-    
+
     protected override void  OnInitialized()
     {
         //Create empty report object
         report = new StiReport();
-        
+
         //Load report template
         report.Load("Reports/TwoSimpleLists.mrt");
+
     }
 
 }
