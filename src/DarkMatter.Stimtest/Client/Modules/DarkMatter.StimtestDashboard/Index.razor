@@ -1,0 +1,33 @@
+@using DarkMatter.Stimtest.Services
+@using DarkMatter.Stimtest.Models
+
+@using Stimulsoft.Base
+@using Stimulsoft.Report
+@using Stimulsoft.Report.Blazor
+
+@namespace DarkMatter.StimtestDashboard
+@inherits ModuleBase
+@inject IStimtestService StimtestService
+@inject NavigationManager NavigationManager
+@inject IStringLocalizer<Index> Localizer
+
+<h3>Sample Dashboard</h3>
+<StiBlazorViewer Report="@dashboard" />
+
+@code {
+    private StiReport dashboard;
+
+
+    protected override void  OnInitialized()
+    {
+        Stimulsoft.Base.StiLicense.Key = "6vJhGtLLLz2GNviWmUTrhSqnOItdDwjBylQzQcAOiHm4tXfNvRlPeioUfrXt8vqaCqWraDqQWufrjzeZmXNj8gsACjQm7Ry1Hv/+atRYO+Af5vT4+KLB8wu0JGt+wIVhXGYBYeoOMajfJRKY2Eu6BNRebD14Yx7W9JJ58Njx+x8UQCgKydtNgEjcdxChTPY7Mqim7bJ/UNt/jP6C16dUTT+ScBCz+8W8kxE7WO372cRl6/znShVhqYZYxCdvOxFLVCSnQWgbWres6iixerlzzSTKSsgftxOWjrt474HI9uzu1nlr/Q1oaGYV1wR2m2MlMn+Y0/r5EhXi2M7h4LbTee/pxl3R1whVPFpEc9q1AfbIMsrgyWBk4ZuTXQji9YNYfNLxq8UOyTGrhZCldL3Soa89IHZpc/0sBIekP7eBVn7kHwyPCFsdnO0YrHj4CONYWlfmKElQY6blEGZt5a4eSJfjJX3289Ws5YIKXaVNxD9Jt5xRNQVOBZ6VUx3+AthUYZQiui6Gg6Siuq+vTeKgBFsSFy2mIRUbd9zQryKZoGDyVI+lMzQWeex5/OIUs8B/FAaN6pAwDNJXh2U/5NE/4Q==";
+
+        //Create empty dashboard object
+        dashboard = StiReport.CreateNewDashboard();
+
+        //Load dashboard template
+        dashboard.Load("Reports/DashboardChristmas.mrt");
+
+    }
+
+}
